@@ -21,7 +21,7 @@
             max-width: 800px;
             margin: 0 auto; 
             display: flex;
-            p{
+            p.autor   {
                 font-weight: bold ;
             }
         }
@@ -40,10 +40,18 @@
          <img src="fotodaatividade.jpeg" alt="As principais tendễncia, dicas de estilo">
          <div>
     <h2>Aprenda a escolher looks com qualquer peça de roupa</h2>
-    <p>Por: Beatriz de Almeida</p>
+    <p class="autor">Por: Beatriz de Almeida</p>
     <p>Dicas simples para combinar peças e montar looks versáteis com o que você já tem no guarda-roupa.</p>
+    <button>❤️<span>0</span></button>
     </div>
     </main>
 </body>
+<script>
+     const botao = document.querySelector ("button");
+     botao.addEventListener ("click", botaoClicado);
+     function botaoClicado () {
+        let texto = botao.querySelector ("span");
+        texto.textContent++;
+     }
+</script>
 </html>
-
